@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    h1= title
+    div.newemployee
+        form( method="post")
+            div
+                div
+                    span.label First Name: :
+                    input(type="text", name="first_name", id="editEmployeeFirstName")
+                div
+                    span.label Last Name :
+                    input(type="text", name="last_name", id="editEmployeeLastName")
+                div
+                    span.label Email :
+                    input(type="text", name="email", id="editEmployeeEmail")
+                div
+                    span.label Password :
+                    input(type="password", name="password1", id="editEmployeePassword1")
+                div
+                    span.label Confirm Password :
+                    input(type="password", name="password2", id="editEmployeePassword2")
+                div
+                    span.label Contact :
+                    input(type="text", name="contact", id="editEmployeeContact")
+                div
+                    span.label Gender :
+                    select(name='gender')
+                       option male 
+                       option female 
+                div#editEmployeeSubmit
+                    input(type="submit", value="Save")
+        a(href="/")!= "Back to Employee List"

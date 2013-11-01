@@ -1,0 +1,32 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <title>Tweet Streamer</title>  
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+		<style>
+			body { font-family:arial; font-size:12px; }
+			ul { list-style-type:none; }
+			li { margin-top:4px; margin-bottom:4px; }
+			small { font-size:10px; }
+			blockquote { margin-left:12px; font-style:italic; background:#f2f2f2; padding:4px; }
+		</style>
+    </head>  
+    <body>  
+        <ul id="tweets"></ul>  
+        <script type="text/javascript">  
+        var tweet_list = $("#tweets");  
+  
+        function load_tweets() {  
+            $.getJSON("/stream", function(tweets) {  
+                $.each(tweets, function() {  
+				var html = "<small>" + this.created_at + "</small><strong>" + this.user.name + "</strong><br><blockquote>" + this.text + "</blockquote>";
+                    $("<li>as").html(html).prependTo(tweet_list);  
+                });  
+                load_tweets();  
+            });  
+        }  
+  
+        setTimeout(load_tweets, 1000);  
+        </script>  
+    </body>  
+</html>  

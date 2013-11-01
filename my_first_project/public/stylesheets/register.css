@@ -1,0 +1,22 @@
+
+#main_wraper { min-height:500px; float:left; background:url(../images/wraper_bg.jpg) no-repeat; height:auto; width:100%; }
+
+#login { margin-top:50px; margin-bottom:10px; }
+
+.left { padding: 5px 10px 5px 20px; margin: 8px 0 0 0; width:90%; float:left; color:#1a171b; font-size:18px; }
+
+.right { padding: 5px 0 5px 20px; margin: 0; width:90%; float:left; }
+
+
+
+.label_class {
+width: 15%;  
+float: left;
+
+}
+.user_detail_attr
+{
+    color: green;
+    text-decoration-style:  solid;
+    font-family: fantasy;
+}

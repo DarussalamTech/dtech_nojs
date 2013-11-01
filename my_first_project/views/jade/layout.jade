@@ -1,0 +1,31 @@
+html
+  head
+    script(type='text/javascript', src='/javascripts/jquery.js')
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+    link(href='/stylesheets/register.css', rel='stylesheet')
+  body
+    header
+      h2 Node Pro
+      ol#toc
+        li.current
+          a(href='/')
+            span Home
+        li
+          a(href='/register')
+            span Register
+        li
+          a(href='/users')
+            span List User
+        li
+          a(href='/about')
+            span About Us
+        li
+          a(href='/userlist')
+            span List User (Jade)
+        li
+          a(href='/newuser')
+            span Add User (Jade)
+        
+
+    block content
+    footer

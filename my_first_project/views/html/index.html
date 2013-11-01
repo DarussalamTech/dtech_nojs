@@ -1,0 +1,13 @@
+<div id="main_wraper">
+    <div id="wraper">
+        <h1>{{{title}}}</h1>
+
+        {{#each entries}}
+        <p>
+            <a href="/article/{{id}}">{{title}}</a><br/>
+            Published: {{published}}
+        </p>
+        {{/each}}
+    </div>
+</div>
+

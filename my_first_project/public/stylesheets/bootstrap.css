@@ -1,0 +1,180 @@
+
+@font-face { font-family: ENZOOT-LIGHTITA; src: url(../fonts/ENZOOT-LIGHTITA.OTF); }
+
+@font-face { font-family:ENZOOT-MEDI; src: url(../fonts/ENZOOT-MEDI.OTF); }
+
+@font-face { font-family:ENZOOT-BOLD; src: url(../fonts/ENZOOT-BOLD.OTF); }
+
+html, body { padding: 0; margin: 0; }
+
+body { font-family:Arial, Helvetica, sans-serif; width: 100%; height: 100%; }
+
+header { background:url(../images/header_bg_03.jpg) repeat-x; height:100px; width:100%; float:left; }
+
+header h1 { text-align:center; color:#FFF; font-style:italic; margin: 30px 0 0 0; padding: 0; }
+
+#main_wraper { float:left; width:100%; background:url(../images/Tahir_02.jpg) no-repeat; min-height:500px; }
+
+#wraper { width:960px; margin: 0 auto; padding: 0; }
+
+#login { background-size:contain; background:url(../images/bg.jpg); width:400px; float:right; padding: 0; margin-top: 70px; border:3px solid #6aacda; border-radius:20px; }
+
+#login h1 { color:#00519e; text-align:center; background:#e8edb9; margin: 0; padding-top:10px; padding-bottom:10px; font-size:30px; border-radius:20px 20px 0 0; }
+
+#login h1 img { margin: 3px 0 0 -130px; position:absolute; text-align:left; }
+
+.name { width:100%; padding: 0; margin: 20px 0 0 0; float:left; display:block; }
+
+.pswrd { width:100%; padding: 0; margin: 0; float:left; display:block; }
+
+.left { padding: 10px 10px 10px 20px; margin: 8px 0 0 0; width:90%; float:left; color:#1a171b; font-size:18px; }
+
+.left span { font-size:14px; color:#F00; }
+.left span div{ float: right; }
+
+.right { padding: 10px 0 10px 20px; margin: 0; width:90%; float:left; }
+
+.right input { width:100%; border: none; border:1px solid #1a171b; border-radius:5px; height:40px; }
+
+input[type=button] ,input[type=submit]{  border: none; margin: 10px 18px 20px 259px; background: #e0e498; border-radius:5px; color:#1a171b; font-size:19px; width:100px; height:30px; cursor:pointer; border:1px solid #b4c723; }
+
+footer { background:url(../images/header_bg_03.jpg) repeat-x; height:100px; width:100%; float:left; }
+
+/* Chatting Page */
+
+#chat { background-size:contain; height:550px; background:url(../images/bg.jpg); width:500px; float:right; padding: 0; margin-top: 20px; border:3px solid #6aacda; border-radius:20px; }
+
+#chat h1 { color:#00519e; padding-left:25px; padding-right:25px; background:#e8edb9; margin: 0; padding-top:10px; padding-bottom:10px; font-size:30px; border-radius:20px 20px 0 0; font-family:ENZOOT-BOLD; text-align:center; }
+
+.chatting { margin-bottom:10px; float:left; min-height:30px; width:90%; margin-left:5%; margin-right:5%; background:#FFF; border-radius:10px; margin-top:10px; }
+
+.chatting h2 { color:#F00; font-size:18px; border-bottom:1px solid #333; padding: 7px 0; margin: 0px 10px; font-family:ENZOOT-MEDI; }
+
+.chatting p { color:#000; font-size:16px; padding: 7px; margin: 0; font-family:ENZOOT-LIGHTITA; }
+
+.chatting_type { width:100%; display:block; float:left; margin-top:10px; }
+
+.typing_text { font-size:12px; font-family:Arial, Helvetica, sans-serif; padding: 0; margin: 10px 5px 0 20px; border:none; height:30px; border-radius:10px; width:70%; padding: 5px 5px 0 5px; float:left; }
+
+.chatting p span { float:right; font-size:12px; color:#999; padding: 5px 0 0 0; margin: 0; font-family:Arial, Helvetica, sans-serif; }
+
+.main_chatting { height:420px; float:left; overflow-y:scroll; }
+
+.right_images { float:right; }
+
+.send_file { margin-right:20px; }
+
+.smiley { float:left; }
+
+@media all and (max-width: 960px) {
+    #wraper { width:100%; }
+
+    #login { margin-right:20px; }
+
+    #chat { margin-right:20px; }
+
+}
+
+@media all and (max-width: 550px) {
+
+    #chat, #login { width:400px; }
+
+    .typing_text { width:60%; }
+
+    #login h1 img { display:none; }
+
+}
+
+@media all and (max-width: 450px) {
+
+    #chat, #login { width:300px; }
+
+    .typing_text { width:40%; }
+
+}
+
+@media all and (max-width: 350px) {
+
+    #chat, #login { width:200px; }
+
+    .typing_text { width:20%; }
+
+}
+h2{
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.content {
+    border: #48f solid 3px;
+    clear: left;
+    padding: 1em;
+}
+
+ol#toc {
+    height: 2em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+ol#toc a {
+    background: #bdf url(../images/tabs.gif);
+    color: #008;
+    display: block;
+    float: left;
+    height: 2em;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+ol#toc a:hover {
+    background-color: #3af;
+    background-position: 0 -120px;
+}
+
+ol#toc a:hover span {
+    background-position: 100% -120px;
+}
+
+ol#toc li {
+    float: left;
+    margin: 0 1px 0 0;
+}
+
+ol#toc li.current a {
+    background-color: #48f;
+    background-position: 0 -60px;
+    color: #fff;
+    font-weight: bold;
+}
+
+ol#toc li.current span {
+    background-position: 100% -60px;
+}
+
+ol#toc span {
+    background: url(../images/tabs.gif) 100% 0;
+    display: block;
+    line-height: 2em;
+    padding-right: 10px;
+}
+
+
+

@@ -1,0 +1,12 @@
+<div id="main_wraper">
+    <div id="wraper">
+        <h1>{{{title}}}</h1>
+
+        {{#each userlist}}
+        <p>
+            Email :  <a href="/viewuser/{{_id}}">{{email}}</a><br/>
+            Name : {{first_name}}
+        </p>
+        {{/each}}
+    </div>
+</div>

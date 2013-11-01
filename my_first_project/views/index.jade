@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1= title
+    #employees
+        - each employee in users
+          div.employee
+            p Welcome to #{title} Page
+            div.first_name= employee.first_name
+            div.last_name= employee.last_name
+            div.email= employee.email 
+            div.password1= employee.password1 
+            div.password2= employee.password2 
+            div.contact= employee.contact 
+            div.gender= employee.gender
+        a(href="/user/new")!= "Add New Employee"
