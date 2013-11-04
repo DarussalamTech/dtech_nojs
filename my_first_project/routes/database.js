@@ -116,9 +116,15 @@ exports.registerdb = function(db) {
 
 exports.update = function(db) {
     return  function(req, res) {
-        var product = req.body;
+        console.log("Eroor in update" + req.param('id'));
         var collection = db.get('userCollection');
-        collection.update({_id: req.params.id}, {first_name: 'khalid bin waleed', last_name: 'kharpaki', email: 'a@gmail.com'}, function(error, result) {
+        collection.update({_id: req.param('id')}, {first_name: req.param('first_name'),
+            last_name: req.param('last_name'),
+            email: req.param('email'),
+            contact: req.param('contact'),
+            gender: req.param('gender')},
+        function(error, result) {
+
             if (error)
             {
                 console.log("Eroor in update");
@@ -130,3 +136,57 @@ exports.update = function(db) {
         });
     }
 }
+exports.updatedb = function(db) {
+    return  function(req, res) {
+        var collection = db.get('userCollection');
+        collection.findById(req.params.id, function(error, info) {
+
+            //three to updateing then redirct
+            res.render('html/update',
+                    {title: info.first_name + ' ' + info.last_name,
+                        id: req.params.id,
+                        model: info});
+        });
+    };
+}
+
+exports.delete = function(db) {
+    return function(req, res) {
+        var collection = db.get('userCollection');
+        collection.remove({_id: req.params.id}, function(error, succes) {
+            res.redirect('/users')
+        });
+    }
+}
+
+
+
+
+
+
+
+//
+//exports.update = function(db) {
+//    return  function(req, res) {
+//        console.log("Eroor in update" + req.param('id'));
+//        var collection = db.get('userCollection');
+//        collection.update({_id: req.param('id')},
+//        {
+//            first_name: req.param('first_name'),
+//            last_name: req.param('last_name'),
+//            last_name: req.param('email'),
+//            last_name: req.param('contact'),
+//            last_name: req.param('gender'),
+//        },
+//        function(error, result) {
+//            if (error)
+//            {
+//                console.log("Eroor in update");
+//            }
+//            else
+//            {
+//                res.redirect("users");
+//            }
+//        });
+//    }
+//}

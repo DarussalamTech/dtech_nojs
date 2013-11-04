@@ -69,16 +69,16 @@ app.get('/register', function(req, res) {
 //    res.render('html/register', {title: "User Registration"}); //rendering reg view
 //});
 app.post('/register', function(req, res) {
-    var userModel = require('./userModel');
-    var model = userModel['UserModel'];
-    model.setAtrribute(req);
-    if (model.save()) {
-        res.redirect('/users');
-    }
+//    var userModel = require('./userModel');
+//    var model = userModel['UserModel'];
+//    model.setAtrribute(req);
+//    if (model.save()) {
+//        res.redirect('/users');
+//    }
 
     res.render('html/register', {
         title: 'New Employee',
-        model: model
+        /// model: model
 
     });
 //    userProvider.save({
@@ -126,17 +126,29 @@ app.get('/users', dbModel.test(db));
 app.get('/newdbuser', dbModel.newDbUserForm); //Create Form Rout
 app.post('/adduser', dbModel.adduser(db)); // post form data
 app.get('/viewuser/:id', dbModel.viewuser(db)); // view individual data
-app.get('/update/:id', dbModel.update(db));
-app.post('/update/:id', dbModel.update(db));
+
+//app.get('/update/:id', function(req, res) {
+//    var userModel = require('./userModel');
+//    var model = userModel['UserModel'];
+//    model.setAtrribute(req,db);
+////    if (model.save()) {
+////        res.redirect('/users');
+////    }
+//    res.render('html/update', {
+//        title: 'New Employee',
+//        id: req.params.id,
+//        model: userModel['UserModel']
+//    }); //for view
+//});
 
 
-
+app.get('/update/:id', dbModel.updatedb(db)); //for update
+app.post('/updatedb', dbModel.update(db)); //for update
+app.get('/delete/:id', dbModel.delete(db)); //for update
 //for jade html eng
 app.get('/userlist', userlist.list(db));
 app.get('/newuser', userlist.newuser);
 app.post('/addjadeuser', userlist.addjadeuser(db));
-
-
 /*
  * Routes file ends here
  */

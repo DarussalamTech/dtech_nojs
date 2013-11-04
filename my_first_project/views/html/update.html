@@ -10,7 +10,7 @@
 
         <div class="form wide">
 
-            <form id="users-form" action="/update" method="post">
+            <form id="users-form" action="/updatedb" method="post">
                 <p class="note">Fields with <span class="required">*</span> are required.</p>
 
 
@@ -20,6 +20,7 @@
                         </span>
                     </label>     
                     <input name="first_name" id="first_name" type="text" maxlength="250" value="{{model.first_name}}" />         
+                    <br> <input name="id" id="first_name" type="hidden" maxlength="250" value="{{id}}" />         
                 </div>
                 <div class="row">
                     <label for="last_name" class="label_class">
@@ -33,28 +34,28 @@
                         Email <span class="required">*
                         </span>
                     </label>     
-                    <input name="email" id="email" type="text" maxlength="250" />         
+                    <input name="email" id="email" type="text" maxlength="250" value="{{model.email}}"/>         
                 </div>
                 <div class="row">
                     <label for="password_1" class="label_class">
                         Password <span class="required">*
                         </span>
                     </label>     
-                    <input name="password_1" id="password_1" type="password" maxlength="250" />         
+                    <input name="password_1" id="password_1" type="password" maxlength="250" value="{{model.password1}}" />         
                 </div>
                 <div class="row">
                     <label for="password_2" class="label_class">
                         Confirm Password <span class="required">*
                         </span>
                     </label>     
-                    <input name="password_2" id="password_2" type="password" maxlength="250" />         
+                    <input name="password_2" id="password_2" type="password" maxlength="250"  />         
                 </div>
                 <div class="row">
                     <label for="password_2" class="label_class">
                         Contact Number <span class="required">*
                         </span>
                     </label>     
-                    <input name="contact" id="contact" type="text" maxlength="250" />         
+                    <input name="contact" id="contact" type="text" maxlength="250" value="{{model.contact}}"/>         
                 </div>
                 <div class="row">
                     <label for="gender" class="label_class">
@@ -67,7 +68,7 @@
                     </select>         
                 </div>
                 <div class="row">
-                    <input type="submit" name="yt0" value="Register" />   
+                    <input type="submit" name="yt0" value="Update" />   
                 </div>
 
             </form>

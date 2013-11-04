@@ -16,11 +16,28 @@
  };
  */
 var UserModel = {
-    last_name: 'ubaid',
-    first_name: 'khan',
-    setAtrribute: function(req) {
-        console.log(req.param('last_name'));
-        this.last_name = req.param('last_name');
+//    last_name: 'u',
+    first_name: 'as',
+    last_name: '',
+    email: '',
+    setAtrribute: function(req, db) {
+
+        var collection = db.get('userCollection');
+        var infor = collection.findById(req.params.id, function(error, info) {
+            this.first_name = "kiu";
+            this.first_name = JSON.stringify(info.first_name);
+            this.last_name = JSON.stringify(info.last_name);
+            this.email = JSON.stringify(info.email);
+            console.log('Success: ' + this.email);
+            return info;
+        });
+
+        //console.log(infor[0]);
+        console.log(infor['email']);
+
+
+//        console.log(req.param('last_name'));
+//        this.last_name = req.param('last_name');
     },
     save: function(req) {
         if (this.last_name == "" || this.first_name == "") {

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title
+    #employees
+        - each employee in employees
+          div.employee
+            div.name= employee.name
+            div.title= employee.title 
+            div.as= employee.name
+            div.as= employee.gender
+            
+        a(href="/employee/new")!= "Add New Employee"
